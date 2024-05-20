@@ -68,7 +68,8 @@ body {
 
 .todo-list {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     background-color: #FFF;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -86,3 +87,17 @@ body {
     margin-bottom: 10px;
     font-size: 16px;
 }
+
+
+.Delete-button {
+    background: transparent;
+    border: none;
+}
+
+.Delete-button img  {
+    display: inline-block;
+    height: 25px;
+    cursor: pointer;
+}
+
+

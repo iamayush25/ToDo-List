@@ -1,30 +1,43 @@
 import React, { useState } from 'react'
 import './App.css'
+import Data from './Data'
 
 function Main() {
-    const [userData , setuserData]  = useState([])
+    const [ListItem, setListItem] = useState('')
+    const [userList, setuserList] = useState([])
     const getData = () => {
-        
-    }
-  return (
-    <>
-        <div className='Main-Container'>
-            <div className='title'>
-                <h1>ToDo List</h1>
-            </div>
-            <div className='togo-body' >
-                <div className='inputs'>
-                <input type='text' placeholder='Add Name' value={userData} />
-                <input type='text' placeholder='Add Contact' value={userData} />
-                <input type='text' placeholder='Add City' value={userData} />
-                <button onClick={getData} >Add</button>  
-                </div>
-                <div></div>  
-            </div>
+        setuserList((previousData) => {
+            return [...previousData, ListItem]
+        })
+        setListItem("")
 
-        </div>
-    </>
-  )
+    }
+
+    const ItemsEvent = (event) => {
+        setListItem(event.target.value)
+    }
+    return (
+        <>
+            <div className='Main-Container'>
+                <div className='title'>
+                    <h1>ToDo List</h1>
+                </div>
+                <div className='todo-body' >
+                    <div className='inputs'>
+                        <input type='text' placeholder='Add Name' value={ListItem} onChange={ItemsEvent} />
+                        <button onClick={getData} >Add</button>
+                    </div>
+                    <ul className='todo-item'>
+                        {userList.map((FinalData) => {
+                            return <Data AllData = {FinalData}/>
+                        })}
+
+                    </ul>
+                </div>
+
+            </div>
+        </>
+    )
 }
 
 export default Main
