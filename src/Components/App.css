@@ -100,4 +100,17 @@ body {
     cursor: pointer;
 }
 
+.Edit-button {
+    background: transparent;
+    border: none;
+}
+
+.Edit-button img  {
+    display: inline-block;
+    height: 25px;
+    cursor: pointer;
+}
+
+
+
 
