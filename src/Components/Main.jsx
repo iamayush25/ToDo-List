@@ -10,7 +10,27 @@ function Main() {
             return [...previousData, ListItem]
         })
         setListItem("")
+    }
 
+    const deleteData = (id) => {
+        console.log('item deleted');
+        setuserList((previousData) => {
+            return previousData.filter((ArrayElements, index) => {
+                return index !== id
+            })
+        })
+    }
+
+    const editItemPrompt = (id) => {
+        const newName = prompt('Enter the new name:');
+        if (newName) {
+            const index = userList.findIndex(userList => userList.id === id);
+            if (index !== -1) {
+                const newItems = [...userList];
+                newItems[index] = { ...setuserList[index], name: newName };
+                setuserList(newItems);
+            }
+        }
     }
 
     const ItemsEvent = (event) => {
@@ -28,8 +48,11 @@ function Main() {
                         <button onClick={getData} >Add</button>
                     </div>
                     <ul className='todo-item'>
-                        {userList.map((FinalData) => {
-                            return <Data AllData = {FinalData}/>
+                        {userList.map((FinalData, index) => {
+                            return <Data id={index} key={index}    // props
+                                deleteItem={deleteData}           // props
+                                editItemPrompt = {editItemPrompt}  // props
+                                AllData={FinalData} />           // props
                         })}
 
                     </ul>
