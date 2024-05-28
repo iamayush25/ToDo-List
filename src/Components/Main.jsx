@@ -52,7 +52,7 @@ function Main() {
             <div className='todo-body'>
                 <div className='inputs'>
                     <input type='text' placeholder='Add Name' value={itemName} onChange={(e) => setItemName(e.target.value)} />
-                    <input type='text' placeholder='Add Contact' value={contact} onChange={(e) => setContact(e.target.value)} />
+                    <input type="number" placeholder='Add Contact' value={contact} onChange={(e) => setContact(e.target.value)} />
                     <input type='text' placeholder='Add City' value={cityName} onChange={(e) => setCityName(e.target.value)} />
                     <button onClick={getData}>Add</button>
                 </div>
