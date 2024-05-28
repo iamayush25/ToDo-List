@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    padding: 0;
+    padding: 3px;
     font-family: Arial, sans-serif;
 }
 
@@ -133,5 +133,21 @@ th {
     display: inline-block;
     height: 25px;
     cursor: pointer;
+}
+
+@media screen and (max-width : 400px)  {
+    .inputs input {
+        width: 20px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width : 360px)  {
+    .inputs input {
+        width: 20px;
+        font-size: 12px;
+        padding: 5px;
+
+    }
 }
 
