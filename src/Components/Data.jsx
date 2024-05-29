@@ -14,12 +14,15 @@ function Data({ AllData, deleteItem, id, editPrompt }) {
             </tr>
           </tbody>
         </table>
-        <button className='Edit-button' onClick={() => editPrompt(id)}>
-          <img src={require('./Image/Edit-button.png')} alt="Edit Button" />
-        </button>
-        <button className='Delete-button' onClick={() => deleteItem(id)}>
-          <img src={require('./Image/delete-button.png')} alt="Delete Button" />
-        </button>
+        <div className='edit-dlt-btn'>
+          <button className='Edit-button' onClick={() => editPrompt(id)}>
+            <img src={require('./Image/Edit-button.png')} alt="Edit Button" />
+          </button>
+          <button className='Delete-button' onClick={() => deleteItem(id)}>
+            <img src={require('./Image/delete-button.png')} alt="Delete Button" />
+          </button>
+
+        </div>
       </div>
     </>
   );
