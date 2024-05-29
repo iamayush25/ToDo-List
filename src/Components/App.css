@@ -89,7 +89,6 @@ body {
 
 table {
     font-family: Arial, sans-serif;
-    /* border-collapse: collapse; */
     width: 85%;
 }
 
@@ -135,19 +134,51 @@ th {
     cursor: pointer;
 }
 
-@media screen and (max-width : 400px)  {
+@media screen and (max-width : 400px) {
     .inputs input {
         width: 20px;
         font-size: 14px;
+
+    }
+
+    .Delete-button img {
+        display: inline-block;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    .Edit-button img {
+        display: inline-block;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        width: 25%;
     }
 }
 
-@media screen and (max-width : 360px)  {
+@media screen and (max-width : 360px) {
     .inputs input {
         width: 20px;
         font-size: 12px;
         padding: 5px;
 
     }
-}
 
+    .Delete-button img {
+        display: inline-block;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    .Edit-button img {
+        display: inline-block;
+        height: 20px;
+        cursor: pointer;
+    }
+}
